@@ -16,7 +16,7 @@ namespace Open_Restaurante
             Open();
         }
 
-        protected string user;
+        private string user;
         public string USER
         {
             get { return user; }
@@ -103,10 +103,6 @@ namespace Open_Restaurante
             else if (tipo == "Empleado")
             {
                 rol = 2;
-            }
-            else if (tipo == "Mostrador")
-            {
-                rol = 3;
             }
         }
     }

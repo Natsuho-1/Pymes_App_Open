@@ -66,6 +66,13 @@
     <Compile Include="MenuRestaurante.Designer.cs">
       <DependentUpon>MenuRestaurante.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clases\ModelProductos.cs" />
+    <Compile Include="NewProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewProducto.Designer.cs">
+      <DependentUpon>NewProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Login\FmLogin.resx">
@@ -76,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuRestaurante.resx">
       <DependentUpon>MenuRestaurante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewProducto.resx">
+      <DependentUpon>NewProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -147,6 +157,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Reportes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productimg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

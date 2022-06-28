@@ -67,7 +67,7 @@ namespace Open_Restaurante
 
         private void txtuser_KeyDown(object sender, KeyEventArgs e)
         {
-
+            //
         }
 
         private void txtuser_KeyDown_1(object sender, KeyEventArgs e)

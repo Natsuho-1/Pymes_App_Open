@@ -59,5 +59,6 @@ namespace Open_Restaurante
         {
             cadena = "server=" + db_host + ";uid=" + db_user + ";pwd=" + db_pass + ";database=" + db_name;
         }
+        ///crear db_close()
     }
 }

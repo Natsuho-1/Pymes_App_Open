@@ -22,6 +22,7 @@ namespace Open_Restaurante
             this.ttMsg.SetToolTip(this.btnLogout, "Administrar Usuarios, Cerrar Sesión, Nuevo Usuario");
             this.ttMsg.SetToolTip(this.btnConfiguracion, "Personaliza la Aplicacion");
             this.ttMsg.SetToolTip(this.btnreports, "Finanzas y Reportes");
+            this.ttMsg.SetToolTip(this.btnayuda, "Manuales y Ayuda");
 
 
             Conexion cn = new Conexion();
@@ -89,6 +90,9 @@ namespace Open_Restaurante
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            NewProducto n = new NewProducto();
+            openChildFormInPanel(new NewProducto());
+            hideSubMenu();
         }
 
         private void btncerrarsesion_Click(object sender, EventArgs e)
