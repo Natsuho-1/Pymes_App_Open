@@ -55,10 +55,18 @@ namespace Open_Restaurante
             con = new SqlConnection(sCn);
             con.Open();
         }
+
+        public void Cerrar()
+        {
+            con.Close();
+        }
         public void db_open()
         {
             cadena = "server=" + db_host + ";uid=" + db_user + ";pwd=" + db_pass + ";database=" + db_name;
         }
-        ///crear db_close()
+
+
+
+        ///crear db_close() xD este men que no cierra las conexiones >:v
     }
 }
