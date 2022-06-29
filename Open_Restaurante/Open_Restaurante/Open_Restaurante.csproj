@@ -60,32 +60,52 @@
     <Compile Include="MenuPrueba.Designer.cs">
       <DependentUpon>MenuPrueba.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuRestaurante.cs">
+    <Compile Include="Administrador\MenuRestauranteAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuRestaurante.Designer.cs">
-      <DependentUpon>MenuRestaurante.cs</DependentUpon>
+    <Compile Include="Administrador\MenuRestauranteAdmin.Designer.cs">
+      <DependentUpon>MenuRestauranteAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\ModelProductos.cs" />
-    <Compile Include="NewProducto.cs">
+    <Compile Include="Productos\NewProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewProducto.Designer.cs">
+    <Compile Include="Productos\NewProducto.Designer.cs">
       <DependentUpon>NewProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\NewUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\NewUsuario.Designer.cs">
+      <DependentUpon>NewUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personalizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personalizar.Designer.cs">
+      <DependentUpon>Personalizar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Clases\usuariosModel.cs" />
+    <Compile Include="Clases\STYLE.cs" />
     <EmbeddedResource Include="Login\FmLogin.resx">
       <DependentUpon>FmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrueba.resx">
       <DependentUpon>MenuPrueba.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuRestaurante.resx">
-      <DependentUpon>MenuRestaurante.cs</DependentUpon>
+    <EmbeddedResource Include="Administrador\MenuRestauranteAdmin.resx">
+      <DependentUpon>MenuRestauranteAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewProducto.resx">
+    <EmbeddedResource Include="Productos\NewProducto.resx">
       <DependentUpon>NewProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\NewUsuario.resx">
+      <DependentUpon>NewUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personalizar.resx">
+      <DependentUpon>Personalizar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -173,5 +193,6 @@
   <ItemGroup>
     <None Include="Resources\actualizar.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

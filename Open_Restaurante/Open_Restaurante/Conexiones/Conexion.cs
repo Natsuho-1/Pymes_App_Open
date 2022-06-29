@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Open_Restaurante
 {
@@ -47,7 +48,12 @@ namespace Open_Restaurante
             get { return datareader; }
             set { datareader = value; }
         }
-
+        private string query;
+        public string QUERY
+        {
+            get { return query; }
+            set { query = value; }
+        }
         public void Open()
         {
             db_open();
@@ -60,5 +66,10 @@ namespace Open_Restaurante
             cadena = "server=" + db_host + ";uid=" + db_user + ";pwd=" + db_pass + ";database=" + db_name;
         }
         ///crear db_close()
+        protected void set_query(string @query)
+        {
+            comando = new SqlCommand(@query, CON);
+            comando.ExecuteNonQuery();
+        }
     }
 }

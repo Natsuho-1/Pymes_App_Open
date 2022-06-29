@@ -45,7 +45,7 @@ namespace Open_Restaurante
                 switch (mlogin.ROL)
                 {
                     case 1:
-                        MenuRestaurante menu = new MenuRestaurante();
+                        MenuRestauranteAdmin menu = new MenuRestauranteAdmin();
                         this.Hide();
                         menu.Show();
                         break;
