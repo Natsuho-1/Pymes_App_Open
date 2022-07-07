@@ -12,10 +12,10 @@ using System.Drawing.Imaging;
 
 namespace Open_Restaurante
 {
-    public partial class NewProducto : Form
+    public partial class modificarProducto : Form
     {
         ModelProductos produ = new ModelProductos();
-        public NewProducto()
+        public modificarProducto()
         {
             InitializeComponent();
             Conexion cn = new Conexion();
@@ -24,10 +24,8 @@ namespace Open_Restaurante
 
         private void NewProducto_Load(object sender, EventArgs e)
         {
-            produ.numeroOrden();
-            lbcodigo.Text = "PR" + produ.ORDEN;
-            txtproducto.Select();
-
+            produ.DATATABLE = new DataTable();
+            produ.all_products(dvgproductos);
         }
 
         public void limpiar()
@@ -38,39 +36,21 @@ namespace Open_Restaurante
             
         }
 
-        private void btnlimpiar_Click(object sender, EventArgs e)
-        {
-            limpiar();
-        }
-
         private void btnagregar_Click(object sender, EventArgs e)
         {
-
-            try
-            {          
-                //Para la imagen del producto
+            if (lbcodigo.Text == "")
+            {
+                MessageBox.Show("Selecciona primero un usuario", "Advertencia");
+            }
+            else
+            {
                 produ.ARCHIVOMEMORIA = new MemoryStream();
                 pbimagen.Image.Save(produ.ARCHIVOMEMORIA, ImageFormat.Bmp);
-
-                //Atributes fill up
-
-                produ.NombreProducto = txtproducto.Text;
-                produ.PrecioProducto = double.Parse(txtprecio.Text);
-                produ.Descripcion = txtdescripcion.Text;
                 produ.CodigoProducto = lbcodigo.Text;
-
-                produ.db_insert_product();
+                //consulta para modificar datos
                 produ.image();
-
-                MessageBox.Show("Producto ingresado exitosamente", "En hora buena!");
-                limpiar();
+                MessageBox.Show("Se ah actualizado con exito", "Atencion");
             }
-            catch (Exception Error)
-            {
-                MessageBox.Show("No se pudo ingresar el producto, o se ha ingresado el mismo tipo más de una vez" + Error, "Alerta"); 
-                
-            }
-
         }
 
         private void btnseleccionarimg_Click(object sender, EventArgs e)
@@ -93,6 +73,35 @@ namespace Open_Restaurante
             this.Close();
         }
 
-       
+        private void txtbuscar_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                produ.buscarProducts(dvgproductos, txtbuscar.Text);
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show("El usuario no existe." + E, "Atencion");
+            }
+        }
+
+        private void dvgproductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int pocicion;
+            try
+            {
+                pocicion = dvgproductos.CurrentRow.Index;
+                lbcodigo.Text = dvgproductos[0, pocicion].Value.ToString();
+                txtproducto.Text = dvgproductos[1, pocicion].Value.ToString();
+                txtprecio.Text = dvgproductos[2, pocicion].Value.ToString();
+                txtdescripcion.Text = dvgproductos[3, pocicion].Value.ToString();
+
+                produ.view_fotos_productos(lbcodigo.Text, pbimagen);
+            }
+            catch
+            {
+                MessageBox.Show("No ah seleccionado ningun registro", "Atencion");
+            }
+        }
     }
 }

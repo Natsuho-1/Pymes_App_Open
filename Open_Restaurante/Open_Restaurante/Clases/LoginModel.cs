@@ -72,7 +72,7 @@ namespace Open_Restaurante
 
         public void Logear()
         {
-            COMANDO = new SqlCommand("Select usuario, contrasena, idTipoUsuario from Usuarios where usuario=@usu and contrasena=@pass", CON);
+            COMANDO = new SqlCommand("Select usuario, CONVERT(varbinary, contraseña), idTipoUsuario from Usuarios where usuario=@usu and convert(varchar,contraseña)=@pass", CON);
             COMANDO.Parameters.AddWithValue("usu", user);
             COMANDO.Parameters.AddWithValue("pass", pass);
             DATAADAPTER = new SqlDataAdapter(COMANDO);
@@ -105,6 +105,5 @@ namespace Open_Restaurante
                 rol = 2;
             }
         }
-
     }
 }

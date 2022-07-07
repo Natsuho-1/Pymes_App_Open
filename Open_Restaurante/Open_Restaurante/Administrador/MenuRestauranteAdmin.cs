@@ -163,5 +163,12 @@ namespace Open_Restaurante
             showSubMenu(panelSubLogout);
             showSubMenu(panelconfig);
         }
+
+        private void btnadministrar_Click(object sender, EventArgs e)
+        {
+            modificarProducto n = new modificarProducto();
+            openChildFormInPanel(new modificarProducto());
+            hideSubMenu();
+        }
     }
 }

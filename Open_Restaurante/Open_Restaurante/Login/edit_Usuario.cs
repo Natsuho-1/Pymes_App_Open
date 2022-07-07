@@ -80,7 +80,7 @@ namespace Open_Restaurante
         {
             if (lbuser.Text == "")
             {
-                MessageBox.Show("Selecciona primero un usuario","Advertencia");
+                MessageBox.Show("Selecciona primero un usuario", "Advertencia");
             }
             else
             {

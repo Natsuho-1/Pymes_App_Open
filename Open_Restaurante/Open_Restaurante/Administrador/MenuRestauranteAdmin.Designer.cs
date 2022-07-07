@@ -125,6 +125,7 @@
             this.btnadministrar.Size = new System.Drawing.Size(140, 95);
             this.btnadministrar.TabIndex = 3;
             this.btnadministrar.UseVisualStyleBackColor = false;
+            this.btnadministrar.Click += new System.EventHandler(this.btnadministrar_Click);
             // 
             // btnagregar
             // 

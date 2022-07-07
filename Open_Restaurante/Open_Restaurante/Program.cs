@@ -16,7 +16,7 @@ namespace Open_Restaurante
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuRestauranteAdmin());
+            Application.Run(new FmLogin());
         }
     }
 }

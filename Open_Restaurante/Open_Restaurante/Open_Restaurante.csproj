@@ -73,6 +73,12 @@
     <Compile Include="Login\edit_Usuario.Designer.cs">
       <DependentUpon>edit_Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="modificarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modificarProducto.Designer.cs">
+      <DependentUpon>modificarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Productos\NewProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\edit_Usuario.resx">
       <DependentUpon>edit_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modificarProducto.resx">
+      <DependentUpon>modificarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productos\NewProducto.resx">
       <DependentUpon>NewProducto.cs</DependentUpon>

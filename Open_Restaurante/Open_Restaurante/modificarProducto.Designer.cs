@@ -1,6 +1,6 @@
 ﻿namespace Open_Restaurante
 {
-    partial class NewProducto
+    partial class modificarProducto
     {
         /// <summary>
         /// Required designer variable.
@@ -37,14 +37,13 @@
             this.Recientes = new System.Windows.Forms.Panel();
             this.panelImgfinal = new System.Windows.Forms.Panel();
             this.IMG = new System.Windows.Forms.Panel();
-            this.btnseleccionarimg = new System.Windows.Forms.Button();
             this.panelcontimg = new System.Windows.Forms.Panel();
+            this.btnseleccionarimg = new System.Windows.Forms.Button();
             this.pbimagen = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.Form = new System.Windows.Forms.Panel();
             this.lbcodigo = new System.Windows.Forms.Label();
-            this.btnlimpiar = new System.Windows.Forms.Button();
             this.lblnameproduct = new System.Windows.Forms.Label();
             this.txtdescripcion = new System.Windows.Forms.TextBox();
             this.btnagregar = new System.Windows.Forms.Button();
@@ -52,16 +51,22 @@
             this.lblpriceproduct = new System.Windows.Forms.Label();
             this.txtproducto = new System.Windows.Forms.TextBox();
             this.lbldescrproduct = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
+            this.dvgproductos = new System.Windows.Forms.DataGridView();
             this.paneltitulo.SuspendLayout();
             this.Paneltrasero.SuspendLayout();
             this.panelBODY.SuspendLayout();
             this.panelFORM.SuspendLayout();
             this.panelexisttrasero.SuspendLayout();
+            this.Recientes.SuspendLayout();
             this.panelImgfinal.SuspendLayout();
             this.IMG.SuspendLayout();
             this.panelcontimg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbimagen)).BeginInit();
             this.Form.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgproductos)).BeginInit();
             this.SuspendLayout();
             // 
             // paneltitulo
@@ -124,47 +129,58 @@
             // 
             this.panelexisttrasero.Controls.Add(this.Recientes);
             this.panelexisttrasero.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelexisttrasero.Location = new System.Drawing.Point(988, 0);
+            this.panelexisttrasero.Location = new System.Drawing.Point(688, 0);
             this.panelexisttrasero.Name = "panelexisttrasero";
-            this.panelexisttrasero.Size = new System.Drawing.Size(147, 614);
+            this.panelexisttrasero.Size = new System.Drawing.Size(447, 614);
             this.panelexisttrasero.TabIndex = 41;
             // 
             // Recientes
             // 
             this.Recientes.AutoScroll = true;
+            this.Recientes.Controls.Add(this.pictureBox1);
+            this.Recientes.Controls.Add(this.txtbuscar);
+            this.Recientes.Controls.Add(this.dvgproductos);
             this.Recientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Recientes.Location = new System.Drawing.Point(0, 0);
             this.Recientes.Name = "Recientes";
-            this.Recientes.Size = new System.Drawing.Size(147, 614);
+            this.Recientes.Size = new System.Drawing.Size(447, 614);
             this.Recientes.TabIndex = 39;
-            this.Recientes.Visible = false;
             // 
             // panelImgfinal
             // 
             this.panelImgfinal.AutoScroll = true;
             this.panelImgfinal.Controls.Add(this.IMG);
             this.panelImgfinal.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelImgfinal.Location = new System.Drawing.Point(563, 0);
+            this.panelImgfinal.Location = new System.Drawing.Point(440, 0);
             this.panelImgfinal.Name = "panelImgfinal";
-            this.panelImgfinal.Size = new System.Drawing.Size(425, 614);
+            this.panelImgfinal.Size = new System.Drawing.Size(248, 614);
             this.panelImgfinal.TabIndex = 40;
             // 
             // IMG
             // 
             this.IMG.AutoScroll = true;
-            this.IMG.Controls.Add(this.btnseleccionarimg);
             this.IMG.Controls.Add(this.panelcontimg);
             this.IMG.Controls.Add(this.label1);
-            this.IMG.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.IMG.Dock = System.Windows.Forms.DockStyle.Left;
             this.IMG.Location = new System.Drawing.Point(0, 0);
             this.IMG.Name = "IMG";
-            this.IMG.Size = new System.Drawing.Size(425, 614);
+            this.IMG.Size = new System.Drawing.Size(244, 614);
             this.IMG.TabIndex = 30;
+            // 
+            // panelcontimg
+            // 
+            this.panelcontimg.Controls.Add(this.btnseleccionarimg);
+            this.panelcontimg.Controls.Add(this.pbimagen);
+            this.panelcontimg.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelcontimg.Location = new System.Drawing.Point(0, 61);
+            this.panelcontimg.Name = "panelcontimg";
+            this.panelcontimg.Size = new System.Drawing.Size(244, 371);
+            this.panelcontimg.TabIndex = 1;
             // 
             // btnseleccionarimg
             // 
             this.btnseleccionarimg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnseleccionarimg.Location = new System.Drawing.Point(130, 367);
+            this.btnseleccionarimg.Location = new System.Drawing.Point(39, 270);
             this.btnseleccionarimg.Name = "btnseleccionarimg";
             this.btnseleccionarimg.Size = new System.Drawing.Size(167, 41);
             this.btnseleccionarimg.TabIndex = 2;
@@ -172,21 +188,12 @@
             this.btnseleccionarimg.UseVisualStyleBackColor = true;
             this.btnseleccionarimg.Click += new System.EventHandler(this.btnseleccionarimg_Click);
             // 
-            // panelcontimg
-            // 
-            this.panelcontimg.Controls.Add(this.pbimagen);
-            this.panelcontimg.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelcontimg.Location = new System.Drawing.Point(0, 61);
-            this.panelcontimg.Name = "panelcontimg";
-            this.panelcontimg.Size = new System.Drawing.Size(425, 371);
-            this.panelcontimg.TabIndex = 1;
-            // 
             // pbimagen
             // 
             this.pbimagen.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pbimagen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbimagen.Image = global::Open_Restaurante.Properties.Resources.productimg;
-            this.pbimagen.Location = new System.Drawing.Point(97, 39);
+            this.pbimagen.Location = new System.Drawing.Point(6, 39);
             this.pbimagen.Name = "pbimagen";
             this.pbimagen.Size = new System.Drawing.Size(225, 225);
             this.pbimagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -199,7 +206,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(425, 61);
+            this.label1.Size = new System.Drawing.Size(244, 61);
             this.label1.TabIndex = 0;
             this.label1.Text = "Imagen del Producto";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -216,7 +223,6 @@
             // 
             this.Form.AutoScroll = true;
             this.Form.Controls.Add(this.lbcodigo);
-            this.Form.Controls.Add(this.btnlimpiar);
             this.Form.Controls.Add(this.lblnameproduct);
             this.Form.Controls.Add(this.txtdescripcion);
             this.Form.Controls.Add(this.btnagregar);
@@ -227,7 +233,7 @@
             this.Form.Dock = System.Windows.Forms.DockStyle.Left;
             this.Form.Location = new System.Drawing.Point(0, 0);
             this.Form.Name = "Form";
-            this.Form.Size = new System.Drawing.Size(563, 614);
+            this.Form.Size = new System.Drawing.Size(440, 614);
             this.Form.TabIndex = 37;
             // 
             // lbcodigo
@@ -235,29 +241,17 @@
             this.lbcodigo.AutoSize = true;
             this.lbcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbcodigo.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbcodigo.Location = new System.Drawing.Point(384, 39);
+            this.lbcodigo.Location = new System.Drawing.Point(277, 34);
             this.lbcodigo.Name = "lbcodigo";
             this.lbcodigo.Size = new System.Drawing.Size(0, 25);
             this.lbcodigo.TabIndex = 1;
-            // 
-            // btnlimpiar
-            // 
-            this.btnlimpiar.FlatAppearance.BorderSize = 0;
-            this.btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnlimpiar.Image = global::Open_Restaurante.Properties.Resources.actualizar;
-            this.btnlimpiar.Location = new System.Drawing.Point(480, 68);
-            this.btnlimpiar.Name = "btnlimpiar";
-            this.btnlimpiar.Size = new System.Drawing.Size(51, 50);
-            this.btnlimpiar.TabIndex = 37;
-            this.btnlimpiar.UseVisualStyleBackColor = true;
-            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
             // 
             // lblnameproduct
             // 
             this.lblnameproduct.AutoSize = true;
             this.lblnameproduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblnameproduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblnameproduct.Location = new System.Drawing.Point(69, 33);
+            this.lblnameproduct.Location = new System.Drawing.Point(51, 34);
             this.lblnameproduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnameproduct.Name = "lblnameproduct";
             this.lblnameproduct.Size = new System.Drawing.Size(199, 25);
@@ -267,10 +261,10 @@
             // txtdescripcion
             // 
             this.txtdescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtdescripcion.Location = new System.Drawing.Point(73, 269);
+            this.txtdescripcion.Location = new System.Drawing.Point(55, 270);
             this.txtdescripcion.Multiline = true;
             this.txtdescripcion.Name = "txtdescripcion";
-            this.txtdescripcion.Size = new System.Drawing.Size(396, 153);
+            this.txtdescripcion.Size = new System.Drawing.Size(345, 153);
             this.txtdescripcion.TabIndex = 36;
             // 
             // btnagregar
@@ -280,21 +274,21 @@
             this.btnagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnagregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnagregar.ForeColor = System.Drawing.Color.White;
-            this.btnagregar.Location = new System.Drawing.Point(195, 443);
+            this.btnagregar.Location = new System.Drawing.Point(151, 439);
             this.btnagregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(140, 44);
             this.btnagregar.TabIndex = 29;
-            this.btnagregar.Text = "Agregar";
+            this.btnagregar.Text = "Modificar";
             this.btnagregar.UseVisualStyleBackColor = false;
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // txtprecio
             // 
             this.txtprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtprecio.Location = new System.Drawing.Point(73, 170);
+            this.txtprecio.Location = new System.Drawing.Point(55, 171);
             this.txtprecio.Name = "txtprecio";
-            this.txtprecio.Size = new System.Drawing.Size(396, 30);
+            this.txtprecio.Size = new System.Drawing.Size(345, 30);
             this.txtprecio.TabIndex = 35;
             // 
             // lblpriceproduct
@@ -302,7 +296,7 @@
             this.lblpriceproduct.AutoSize = true;
             this.lblpriceproduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblpriceproduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblpriceproduct.Location = new System.Drawing.Point(69, 128);
+            this.lblpriceproduct.Location = new System.Drawing.Point(51, 129);
             this.lblpriceproduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblpriceproduct.Name = "lblpriceproduct";
             this.lblpriceproduct.Size = new System.Drawing.Size(185, 25);
@@ -312,9 +306,9 @@
             // txtproducto
             // 
             this.txtproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtproducto.Location = new System.Drawing.Point(73, 75);
+            this.txtproducto.Location = new System.Drawing.Point(55, 76);
             this.txtproducto.Name = "txtproducto";
-            this.txtproducto.Size = new System.Drawing.Size(396, 30);
+            this.txtproducto.Size = new System.Drawing.Size(345, 30);
             this.txtproducto.TabIndex = 34;
             // 
             // lbldescrproduct
@@ -322,21 +316,54 @@
             this.lbldescrproduct.AutoSize = true;
             this.lbldescrproduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbldescrproduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lbldescrproduct.Location = new System.Drawing.Point(69, 225);
+            this.lbldescrproduct.Location = new System.Drawing.Point(51, 226);
             this.lbldescrproduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbldescrproduct.Name = "lbldescrproduct";
             this.lbldescrproduct.Size = new System.Drawing.Size(226, 25);
             this.lbldescrproduct.TabIndex = 33;
             this.lbldescrproduct.Text = "Descripción del producto";
             // 
-            // NewProducto
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = global::Open_Restaurante.Properties.Resources.lupa;
+            this.pictureBox1.Location = new System.Drawing.Point(393, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtbuscar.Location = new System.Drawing.Point(33, 30);
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(344, 30);
+            this.txtbuscar.TabIndex = 11;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
+            // 
+            // dvgproductos
+            // 
+            this.dvgproductos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dvgproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgproductos.Location = new System.Drawing.Point(33, 79);
+            this.dvgproductos.Name = "dvgproductos";
+            this.dvgproductos.RowHeadersWidth = 51;
+            this.dvgproductos.RowTemplate.Height = 24;
+            this.dvgproductos.Size = new System.Drawing.Size(388, 429);
+            this.dvgproductos.TabIndex = 10;
+            this.dvgproductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgproductos_CellClick);
+            // 
+            // modificarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1118, 615);
             this.Controls.Add(this.Paneltrasero);
-            this.Name = "NewProducto";
+            this.Name = "modificarProducto";
             this.Text = "Newuser";
             this.Load += new System.EventHandler(this.NewProducto_Load);
             this.paneltitulo.ResumeLayout(false);
@@ -344,12 +371,16 @@
             this.panelBODY.ResumeLayout(false);
             this.panelFORM.ResumeLayout(false);
             this.panelexisttrasero.ResumeLayout(false);
+            this.Recientes.ResumeLayout(false);
+            this.Recientes.PerformLayout();
             this.panelImgfinal.ResumeLayout(false);
             this.IMG.ResumeLayout(false);
             this.panelcontimg.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbimagen)).EndInit();
             this.Form.ResumeLayout(false);
             this.Form.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgproductos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -378,7 +409,9 @@
         private System.Windows.Forms.Panel Recientes;
         private System.Windows.Forms.Panel panelexisttrasero;
         private System.Windows.Forms.Panel panelImgfinal;
-        private System.Windows.Forms.Button btnlimpiar;
         private System.Windows.Forms.Label lbcodigo;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtbuscar;
+        private System.Windows.Forms.DataGridView dvgproductos;
     }
 }
