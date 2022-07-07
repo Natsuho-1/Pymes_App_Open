@@ -10,8 +10,14 @@ using System.IO;
 
 namespace Open_Restaurante
 {
-    class ModelProductos : Conexion
+    class ModelProductos : LoginModel
     {    //Atributos de la clase molde de productos con sus propiedades
+        private int orden;
+        public int ORDEN
+        {
+            get { return orden; }
+            set { orden = value; }
+        }
         private int idProducto;
         public int IdProducto
         {
@@ -71,7 +77,7 @@ namespace Open_Restaurante
                 COMANDO.Connection = CON;
                 COMANDO.CommandText = "ingresarImgProduct";
                 COMANDO.CommandType = CommandType.StoredProcedure;
-                COMANDO.Parameters.AddWithValue("@cod", idProducto);
+                COMANDO.Parameters.AddWithValue("@cod", codigoProducto);
                 COMANDO.Parameters.AddWithValue("@image", archivoMemoria.GetBuffer());
 
                 rpt = COMANDO.ExecuteNonQuery() > 0 ? "En hora buena! La imagen se guardo" : "No se guardo la imagen";
@@ -118,6 +124,36 @@ namespace Open_Restaurante
             }
         }
 
-    
+        public void numeroOrden()
+        {
+            try
+            {
+                //"SELECT COUNT(idProducto) AS Cod FROM Productos"
+                QUERY = "SELECT COUNT(idProducto) AS Cod FROM Productos";
+               // QUERY = "SELECT idProducto FROM Productos";
+                COMANDO = new SqlCommand(QUERY, CON);
+
+                SqlDataReader DATAREADER = COMANDO.ExecuteReader();
+
+                if (DATAREADER.Read())
+                {
+                    ORDEN = int.Parse(DATAREADER["Cod"].ToString().Trim());
+                    ORDEN++;
+                    DATAREADER.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Error", "Atencion");
+                    DATAREADER.Close();
+                }
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show("" + E);
+            }
+
+        }
+
+
     }
 }

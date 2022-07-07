@@ -48,7 +48,7 @@ namespace Open_Restaurante
         }
         public void db_insert_user()
         {
-            QUERY = "INSERT INTO Usuarios(nombre, apellido, fechaNacimiento, usuario, contrasena, email, telefono, idTipoUsuario)" +
+            QUERY = "INSERT INTO Usuarios(nombre, apellido, fechaNacimiento, usuario, contraseña, email, telefono, idTipoUsuario)" +
                 "VALUES ('" + nombre + "','" + apellido + "','" + fechaNacimiento + "','" + USER + "',CONVERT(varbinary,'" + pass2 + "'),'" + CORREO + "','" + TELEFONO + "','" + ROL + "');";
             set_query(QUERY);
         }

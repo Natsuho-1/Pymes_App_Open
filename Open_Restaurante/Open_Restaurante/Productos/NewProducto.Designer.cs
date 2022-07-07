@@ -43,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.Form = new System.Windows.Forms.Panel();
+            this.lbcodigo = new System.Windows.Forms.Label();
             this.btnlimpiar = new System.Windows.Forms.Button();
             this.lblnameproduct = new System.Windows.Forms.Label();
             this.txtdescripcion = new System.Windows.Forms.TextBox();
@@ -69,7 +70,7 @@
             this.paneltitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneltitulo.Location = new System.Drawing.Point(0, 0);
             this.paneltitulo.Name = "paneltitulo";
-            this.paneltitulo.Size = new System.Drawing.Size(1114, 88);
+            this.paneltitulo.Size = new System.Drawing.Size(891, 138);
             this.paneltitulo.TabIndex = 3;
             // 
             // lbladdproducto
@@ -81,7 +82,7 @@
             this.lbladdproducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbladdproducto.Name = "lbladdproducto";
             this.lbladdproducto.Padding = new System.Windows.Forms.Padding(0, 25, 0, 0);
-            this.lbladdproducto.Size = new System.Drawing.Size(349, 88);
+            this.lbladdproducto.Size = new System.Drawing.Size(349, 138);
             this.lbladdproducto.TabIndex = 2;
             this.lbladdproducto.Text = "Agregar producto";
             this.lbladdproducto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -93,7 +94,7 @@
             this.Paneltrasero.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Paneltrasero.Location = new System.Drawing.Point(0, 0);
             this.Paneltrasero.Name = "Paneltrasero";
-            this.Paneltrasero.Size = new System.Drawing.Size(1114, 611);
+            this.Paneltrasero.Size = new System.Drawing.Size(891, 488);
             this.Paneltrasero.TabIndex = 0;
             // 
             // panelBODY
@@ -101,9 +102,9 @@
             this.panelBODY.AutoScroll = true;
             this.panelBODY.Controls.Add(this.panelFORM);
             this.panelBODY.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBODY.Location = new System.Drawing.Point(0, 88);
+            this.panelBODY.Location = new System.Drawing.Point(0, 138);
             this.panelBODY.Name = "panelBODY";
-            this.panelBODY.Size = new System.Drawing.Size(1114, 523);
+            this.panelBODY.Size = new System.Drawing.Size(891, 350);
             this.panelBODY.TabIndex = 4;
             // 
             // panelFORM
@@ -116,7 +117,7 @@
             this.panelFORM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFORM.Location = new System.Drawing.Point(0, 0);
             this.panelFORM.Name = "panelFORM";
-            this.panelFORM.Size = new System.Drawing.Size(1114, 523);
+            this.panelFORM.Size = new System.Drawing.Size(891, 350);
             this.panelFORM.TabIndex = 1;
             // 
             // panelexisttrasero
@@ -169,6 +170,7 @@
             this.btnseleccionarimg.TabIndex = 2;
             this.btnseleccionarimg.Text = "Elegir Imagen";
             this.btnseleccionarimg.UseVisualStyleBackColor = true;
+            this.btnseleccionarimg.Click += new System.EventHandler(this.btnseleccionarimg_Click);
             // 
             // panelcontimg
             // 
@@ -176,14 +178,14 @@
             this.panelcontimg.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelcontimg.Location = new System.Drawing.Point(0, 61);
             this.panelcontimg.Name = "panelcontimg";
-            this.panelcontimg.Size = new System.Drawing.Size(425, 297);
+            this.panelcontimg.Size = new System.Drawing.Size(425, 371);
             this.panelcontimg.TabIndex = 1;
             // 
             // pbimagen
             // 
             this.pbimagen.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pbimagen.Image = global::Open_Restaurante.Properties.Resources.productimg;
-            this.pbimagen.Location = new System.Drawing.Point(99, 35);
+            this.pbimagen.Location = new System.Drawing.Point(46, 35);
             this.pbimagen.Name = "pbimagen";
             this.pbimagen.Size = new System.Drawing.Size(225, 225);
             this.pbimagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -212,6 +214,7 @@
             // Form
             // 
             this.Form.AutoScroll = true;
+            this.Form.Controls.Add(this.lbcodigo);
             this.Form.Controls.Add(this.btnlimpiar);
             this.Form.Controls.Add(this.lblnameproduct);
             this.Form.Controls.Add(this.txtdescripcion);
@@ -225,6 +228,14 @@
             this.Form.Name = "Form";
             this.Form.Size = new System.Drawing.Size(563, 614);
             this.Form.TabIndex = 37;
+            // 
+            // lbcodigo
+            // 
+            this.lbcodigo.AutoSize = true;
+            this.lbcodigo.Location = new System.Drawing.Point(384, 39);
+            this.lbcodigo.Name = "lbcodigo";
+            this.lbcodigo.Size = new System.Drawing.Size(0, 16);
+            this.lbcodigo.TabIndex = 1;
             // 
             // btnlimpiar
             // 
@@ -243,7 +254,7 @@
             this.lblnameproduct.AutoSize = true;
             this.lblnameproduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblnameproduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblnameproduct.Location = new System.Drawing.Point(68, 32);
+            this.lblnameproduct.Location = new System.Drawing.Point(69, 33);
             this.lblnameproduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnameproduct.Name = "lblnameproduct";
             this.lblnameproduct.Size = new System.Drawing.Size(199, 25);
@@ -287,7 +298,7 @@
             this.lblpriceproduct.AutoSize = true;
             this.lblpriceproduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblpriceproduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblpriceproduct.Location = new System.Drawing.Point(68, 127);
+            this.lblpriceproduct.Location = new System.Drawing.Point(69, 128);
             this.lblpriceproduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblpriceproduct.Name = "lblpriceproduct";
             this.lblpriceproduct.Size = new System.Drawing.Size(185, 25);
@@ -297,7 +308,7 @@
             // txtproducto
             // 
             this.txtproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtproducto.Location = new System.Drawing.Point(73, 77);
+            this.txtproducto.Location = new System.Drawing.Point(73, 75);
             this.txtproducto.Name = "txtproducto";
             this.txtproducto.Size = new System.Drawing.Size(396, 30);
             this.txtproducto.TabIndex = 34;
@@ -307,7 +318,7 @@
             this.lbldescrproduct.AutoSize = true;
             this.lbldescrproduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbldescrproduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lbldescrproduct.Location = new System.Drawing.Point(68, 225);
+            this.lbldescrproduct.Location = new System.Drawing.Point(69, 225);
             this.lbldescrproduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbldescrproduct.Name = "lbldescrproduct";
             this.lbldescrproduct.Size = new System.Drawing.Size(226, 25);
@@ -319,7 +330,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1114, 611);
+            this.ClientSize = new System.Drawing.Size(891, 488);
             this.Controls.Add(this.Paneltrasero);
             this.Name = "NewProducto";
             this.Text = "Newuser";
@@ -364,5 +375,6 @@
         private System.Windows.Forms.Panel panelexisttrasero;
         private System.Windows.Forms.Panel panelImgfinal;
         private System.Windows.Forms.Button btnlimpiar;
+        private System.Windows.Forms.Label lbcodigo;
     }
 }

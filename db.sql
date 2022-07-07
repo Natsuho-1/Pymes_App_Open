@@ -154,16 +154,16 @@ GO
 
 --Procedures for products
 create proc mostraProduct
-@cod varchar(50)
+@cod varchar(5)
 as
-SELECT imgProducto FROM Productos WHERE idProducto = @cod;
+SELECT imgProducto FROM Productos WHERE codigoProducto = @cod;
 go
 
 create proc ingresarImgProduct
-@cod varchar(50),
+@cod varchar(5),
 @image image
 as
-UPDATE Productos SET imgProducto = @image WHERE idProducto = @cod;
+UPDATE Productos SET imgProducto = @image WHERE codigoProducto = @cod;
 go
 
 GO
@@ -190,3 +190,5 @@ Select*from Productos
 Select*from view_products_in_database
 GO
 SELECT*from Productos
+
+SELECT COUNT(idProducto) FROM Productos
