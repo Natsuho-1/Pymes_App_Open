@@ -2,7 +2,10 @@ USE master
 GO
 CREATE DATABASE Restaurantes_OpenLicense
 GO
+
 USE Restaurantes_OpenLicense
+select*from Usuarios
+select*from Productos
 --USE master
 --DROP DATABASE Restaurantes_OpenLicense
 GO
@@ -47,6 +50,7 @@ GO
 INSERT INTO Usuarios (nombre, apellido, fechaNacimiento, usuario, contrasena, email, Telefono, idTipoUsuario) 
 VALUES ('Administrador', 'Principal', '2022-06-07', 'Admin',CONVERT(varbinary,'Admin'), 'administrador@email.com', '+503 0000-0000', 1);
 GO
+
 
 
 
@@ -133,7 +137,7 @@ constraint fk_idPedido foreign key (idPedido) references Pedido(idPedido)
 
 --PROCEDIEMNTOS PARA GUARDAR Y MOSTRAR IMAGENES
 GO
-
+--Procedures for users
 create proc mostrar
 @cod varchar(50)
 as
@@ -148,6 +152,20 @@ as
 UPDATE Usuarios SET foto=@imagen WHERE usuario=@cod;
 GO
 
+--Procedures for products
+create proc mostraProduct
+@cod varchar(50)
+as
+SELECT imgProducto FROM Productos WHERE idProducto = @cod;
+go
+
+create proc ingresarImgProduct
+@cod varchar(50),
+@image image
+as
+UPDATE Productos SET imgProducto = @image WHERE idProducto = @cod;
+go
+
 GO
 
 
@@ -156,6 +174,19 @@ CREATE VIEW view_users_in_database
 AS 
 SELECT usuario AS [Nombre de Usuario], CONCAT ( nombre, ' ', apellido) AS [Nombre Completo], fechaNacimiento AS Cumpleaños, email AS Email, Telefono, idTipoUsuario AS [Tipo de Usuario]
 FROM Usuarios
-
 GO
+
 select*from view_users_in_database
+GO
+
+
+CREATE VIEW view_products_in_database
+AS
+SELECT codigoProducto AS [Codigo Product], nombreProducto AS [Nombre de Producto], precioProducto AS [Precio de Producto], Descripcion AS Descripcion, idProducto AS [ID de Producto]  
+FROM Productos
+GO
+
+Select*from Productos
+Select*from view_products_in_database
+GO
+SELECT*from Productos
