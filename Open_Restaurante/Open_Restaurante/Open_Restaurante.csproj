@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1518E735-1290-49BD-8D69-AE55ED102476}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Open_Restaurante</RootNamespace>
+    <AssemblyName>Open_Restaurante</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conexiones\Conexion.cs" />
+    <Compile Include="Login\FmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\FmLogin.Designer.cs">
+      <DependentUpon>FmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\LoginModel.cs" />
+    <Compile Include="MenuPrueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrueba.Designer.cs">
+      <DependentUpon>MenuPrueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\MenuRestauranteAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\MenuRestauranteAdmin.Designer.cs">
+      <DependentUpon>MenuRestauranteAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\ModelProductos.cs" />
+    <Compile Include="Login\edit_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\edit_Usuario.Designer.cs">
+      <DependentUpon>edit_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modificarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modificarProducto.Designer.cs">
+      <DependentUpon>modificarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\NewProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\NewProducto.Designer.cs">
+      <DependentUpon>NewProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\NewUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\NewUsuario.Designer.cs">
+      <DependentUpon>NewUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personalizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personalizar.Designer.cs">
+      <DependentUpon>Personalizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Clases\usuariosModel.cs" />
+    <Compile Include="Clases\STYLE.cs" />
+    <EmbeddedResource Include="Login\FmLogin.resx">
+      <DependentUpon>FmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrueba.resx">
+      <DependentUpon>MenuPrueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\MenuRestauranteAdmin.resx">
+      <DependentUpon>MenuRestauranteAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\edit_Usuario.resx">
+      <DependentUpon>edit_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modificarProducto.resx">
+      <DependentUpon>modificarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\NewProducto.resx">
+      <DependentUpon>NewProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\NewUsuario.resx">
+      <DependentUpon>NewUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personalizar.resx">
+      <DependentUpon>Personalizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregarPRODUCTO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoRes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginimg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregarPRODUCTO1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrarPRODUCTOS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuarioLOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuarioLOGO1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuraciones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuracion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\INICIO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inicio1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inicio2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\INI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hogar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagina-de-inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reportes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productimg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
