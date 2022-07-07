@@ -75,7 +75,7 @@
             // lbladdproducto
             // 
             this.lbladdproducto.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbladdproducto.Font = new System.Drawing.Font("Montserrat", 16F);
+            this.lbladdproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.lbladdproducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.lbladdproducto.Location = new System.Drawing.Point(0, 0);
             this.lbladdproducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -193,7 +193,7 @@
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 12F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(425, 61);
@@ -241,12 +241,12 @@
             // lblnameproduct
             // 
             this.lblnameproduct.AutoSize = true;
-            this.lblnameproduct.Font = new System.Drawing.Font("Montserrat", 12F);
+            this.lblnameproduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblnameproduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.lblnameproduct.Location = new System.Drawing.Point(68, 32);
             this.lblnameproduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnameproduct.Name = "lblnameproduct";
-            this.lblnameproduct.Size = new System.Drawing.Size(235, 27);
+            this.lblnameproduct.Size = new System.Drawing.Size(199, 25);
             this.lblnameproduct.TabIndex = 31;
             this.lblnameproduct.Text = "Nombre del producto:";
             // 
@@ -263,7 +263,7 @@
             this.btnagregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(48)))));
             this.btnagregar.FlatAppearance.BorderSize = 0;
             this.btnagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnagregar.Font = new System.Drawing.Font("Roboto", 12F);
+            this.btnagregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnagregar.ForeColor = System.Drawing.Color.White;
             this.btnagregar.Location = new System.Drawing.Point(195, 443);
             this.btnagregar.Margin = new System.Windows.Forms.Padding(4);
@@ -272,44 +272,45 @@
             this.btnagregar.TabIndex = 29;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = false;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // txtprecio
             // 
-            this.txtprecio.Font = new System.Drawing.Font("Montserrat", 12F);
+            this.txtprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtprecio.Location = new System.Drawing.Point(73, 170);
             this.txtprecio.Name = "txtprecio";
-            this.txtprecio.Size = new System.Drawing.Size(396, 34);
+            this.txtprecio.Size = new System.Drawing.Size(396, 30);
             this.txtprecio.TabIndex = 35;
             // 
             // lblpriceproduct
             // 
             this.lblpriceproduct.AutoSize = true;
-            this.lblpriceproduct.Font = new System.Drawing.Font("Montserrat", 12F);
+            this.lblpriceproduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblpriceproduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.lblpriceproduct.Location = new System.Drawing.Point(68, 127);
             this.lblpriceproduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblpriceproduct.Name = "lblpriceproduct";
-            this.lblpriceproduct.Size = new System.Drawing.Size(214, 27);
+            this.lblpriceproduct.Size = new System.Drawing.Size(185, 25);
             this.lblpriceproduct.TabIndex = 32;
             this.lblpriceproduct.Text = "Precio del producto:";
             // 
             // txtproducto
             // 
-            this.txtproducto.Font = new System.Drawing.Font("Montserrat", 12F);
+            this.txtproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtproducto.Location = new System.Drawing.Point(73, 77);
             this.txtproducto.Name = "txtproducto";
-            this.txtproducto.Size = new System.Drawing.Size(396, 34);
+            this.txtproducto.Size = new System.Drawing.Size(396, 30);
             this.txtproducto.TabIndex = 34;
             // 
             // lbldescrproduct
             // 
             this.lbldescrproduct.AutoSize = true;
-            this.lbldescrproduct.Font = new System.Drawing.Font("Montserrat", 12F);
+            this.lbldescrproduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbldescrproduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.lbldescrproduct.Location = new System.Drawing.Point(68, 225);
             this.lbldescrproduct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbldescrproduct.Name = "lbldescrproduct";
-            this.lbldescrproduct.Size = new System.Drawing.Size(267, 27);
+            this.lbldescrproduct.Size = new System.Drawing.Size(226, 25);
             this.lbldescrproduct.TabIndex = 33;
             this.lbldescrproduct.Text = "Descripción del producto";
             // 
@@ -322,6 +323,7 @@
             this.Controls.Add(this.Paneltrasero);
             this.Name = "NewProducto";
             this.Text = "Newuser";
+            this.Load += new System.EventHandler(this.NewProducto_Load);
             this.paneltitulo.ResumeLayout(false);
             this.Paneltrasero.ResumeLayout(false);
             this.panelBODY.ResumeLayout(false);
