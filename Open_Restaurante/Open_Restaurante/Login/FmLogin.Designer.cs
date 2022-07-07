@@ -52,7 +52,7 @@
             // 
             // pnllogologin
             // 
-            this.pnllogologin.BackColor = System.Drawing.Color.SteelBlue;
+            this.pnllogologin.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.pnllogologin.Controls.Add(this.lbtelefono);
             this.pnllogologin.Controls.Add(this.lbcorreo);
             this.pnllogologin.Controls.Add(this.lbcontactos);
@@ -153,7 +153,7 @@
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogin.Font = new System.Drawing.Font("Roboto", 12F);
             this.btnlogin.ForeColor = System.Drawing.Color.White;
-            this.btnlogin.Location = new System.Drawing.Point(555, 397);
+            this.btnlogin.Location = new System.Drawing.Point(537, 397);
             this.btnlogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(162, 44);
@@ -167,7 +167,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(483, 256);
+            this.label4.Location = new System.Drawing.Point(465, 256);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(142, 29);
@@ -179,7 +179,7 @@
             this.lblusuario.AutoSize = true;
             this.lblusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.lblusuario.ForeColor = System.Drawing.Color.White;
-            this.lblusuario.Location = new System.Drawing.Point(483, 136);
+            this.lblusuario.Location = new System.Drawing.Point(465, 136);
             this.lblusuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblusuario.Name = "lblusuario";
             this.lblusuario.Size = new System.Drawing.Size(102, 29);
@@ -190,7 +190,7 @@
             // 
             this.txtuser.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txtuser.Location = new System.Drawing.Point(488, 186);
+            this.txtuser.Location = new System.Drawing.Point(470, 186);
             this.txtuser.MaxLength = 200;
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(286, 34);
@@ -201,7 +201,7 @@
             // 
             this.txtpass.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.txtpass.Location = new System.Drawing.Point(488, 302);
+            this.txtpass.Location = new System.Drawing.Point(470, 302);
             this.txtpass.MaxLength = 200;
             this.txtpass.Name = "txtpass";
             this.txtpass.Size = new System.Drawing.Size(286, 34);
@@ -211,7 +211,7 @@
             // 
             // cbmostrarpass
             // 
-            this.cbmostrarpass.Location = new System.Drawing.Point(794, 309);
+            this.cbmostrarpass.Location = new System.Drawing.Point(776, 309);
             this.cbmostrarpass.Name = "cbmostrarpass";
             this.cbmostrarpass.Size = new System.Drawing.Size(30, 27);
             this.cbmostrarpass.TabIndex = 34;
@@ -228,7 +228,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GrayText;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(836, 588);
             this.Controls.Add(this.cbmostrarpass);
             this.Controls.Add(this.txtpass);

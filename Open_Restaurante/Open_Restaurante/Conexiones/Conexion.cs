@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
+using System.IO;
+using System.Drawing;
 
 namespace Open_Restaurante
 {
@@ -66,10 +68,68 @@ namespace Open_Restaurante
             cadena = "server=" + db_host + ";uid=" + db_user + ";pwd=" + db_pass + ";database=" + db_name;
         }
         ///crear db_close()
-        protected void set_query(string @query)
+        protected void set_query(string query)
         {
-            comando = new SqlCommand(@query, CON);
+            comando = new SqlCommand(query, con);
             comando.ExecuteNonQuery();
+        }
+        public void get_data_in_dvg(DataGridView dgv, string query)
+        {
+            try
+            {
+                DATAADAPTER = new SqlDataAdapter(query, con);
+                DATAADAPTER.Fill(DATATABLE);
+                dgv.DataSource = DATATABLE;
+                dgv.Refresh();
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show("No se pudo llenar la tabla: " + E.ToString());
+            }
+        }
+        public void get_busqueda(DataGridView dvg, string query, string Search)
+        {
+            try
+            {
+                COMANDO = new SqlCommand(query, con);
+                COMANDO.Parameters.AddWithValue("@param", Search);
+                DATAADAPTER = new SqlDataAdapter(COMANDO);
+                DataTable dt = new DataTable();
+                DATAADAPTER.Fill(dt);
+                dvg.DataSource = dt;
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show("No se pudo llenar la tabla: " + E.ToString());
+            }
+        }
+        public void get_fotos(string query, PictureBox pb)
+        {
+            comando = new SqlCommand(query, con);
+            datareader = comando.ExecuteReader();
+            if (datareader.Read())
+            {
+                try
+                {
+                    Byte[] archivo = (byte[])datareader["foto"];
+                    Stream imagenn = new MemoryStream(archivo);
+
+                    pb.Image = Image.FromStream(imagenn);
+                    datareader.Close();
+                }
+                catch
+                {
+                    pb.Image = Open_Restaurante.Properties.Resources.productimg;
+                    MessageBox.Show("El usuario no posee fotografia.", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                    datareader.Close();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("El usuario no posee foto.", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                datareader.Close();
+            }
         }
     }
 }

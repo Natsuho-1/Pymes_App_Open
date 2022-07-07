@@ -86,6 +86,7 @@ namespace Open_Restaurante
                 lbvec.Text = "retra";
             }
             showSubMenu(panelSubLogout);
+            showSubMenu(panelconfig);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -128,6 +129,7 @@ namespace Open_Restaurante
                 hideSubMenu();
             }
             showSubMenu(panelSubLogout);
+            showSubMenu(panelconfig);
         }
 
         private void btnConfiguracion_Click(object sender, EventArgs e)
@@ -135,6 +137,31 @@ namespace Open_Restaurante
             Personalizar n = new Personalizar();
             openChildFormInPanel(new Personalizar());
             hideSubMenu();
+        }
+        private void btnadminusers_Click(object sender, EventArgs e)
+        {
+            if (lbvec.Text == "retra")
+            {
+                int newWidth = 120;
+                panelconfig.Size = new Size(newWidth, panelconfig.Height);
+                panelDER.Size = new Size(newWidth, panelconfig.Height);
+                lbvec.Text = "Exp";
+                edit_Usuario n = new edit_Usuario();
+                openChildFormInPanel(new edit_Usuario());
+                hideSubMenu();
+            }
+            else if (lbvec.Text == "Exp")
+            {
+                int newWidth = 8;
+                panelconfig.Size = new Size(newWidth, panelconfig.Height);
+                panelDER.Size = new Size(newWidth, panelconfig.Height);
+                lbvec.Text = "retra";
+                edit_Usuario n = new edit_Usuario();
+                openChildFormInPanel(new edit_Usuario());
+                hideSubMenu();
+            }
+            showSubMenu(panelSubLogout);
+            showSubMenu(panelconfig);
         }
     }
 }

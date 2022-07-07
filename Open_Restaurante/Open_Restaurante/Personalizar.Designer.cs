@@ -67,11 +67,11 @@
             this.lbladdproducto.Location = new System.Drawing.Point(0, 0);
             this.lbladdproducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbladdproducto.Name = "lbladdproducto";
-            this.lbladdproducto.Padding = new System.Windows.Forms.Padding(0, 25, 0, 0);
+            this.lbladdproducto.Padding = new System.Windows.Forms.Padding(15, 25, 0, 0);
             this.lbladdproducto.Size = new System.Drawing.Size(349, 88);
             this.lbladdproducto.TabIndex = 2;
             this.lbladdproducto.Text = "Personalizar ";
-            this.lbladdproducto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbladdproducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblnameproduct
             // 

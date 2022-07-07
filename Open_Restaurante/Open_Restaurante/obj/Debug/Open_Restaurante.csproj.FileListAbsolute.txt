@@ -1,7 +1,6 @@
 C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\bin\Debug\Open_Restaurante.exe.config
 C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\bin\Debug\Open_Restaurante.exe
 C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\bin\Debug\Open_Restaurante.pdb
-C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Restaurante.csprojAssemblyReference.cache
 C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Restaurante.FmLogin.resources
 C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Restaurante.Properties.Resources.resources
 C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Restaurante.csproj.GenerateResource.cache
@@ -9,7 +8,9 @@ C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Res
 C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Restaurante.exe
 C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Restaurante.pdb
 C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Restaurante.MenuPrueba.resources
-C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Restaurante.MenuRestaurante.resources
 C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Restaurante.NewProducto.resources
 C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Restaurante.NewUsuario.resources
 C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Restaurante.Personalizar.resources
+C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Restaurante.MenuRestauranteAdmin.resources
+C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Restaurante.csproj.AssemblyReference.cache
+C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Restaurante.edit_Usuario.resources

@@ -67,6 +67,12 @@
       <DependentUpon>MenuRestauranteAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\ModelProductos.cs" />
+    <Compile Include="Login\edit_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\edit_Usuario.Designer.cs">
+      <DependentUpon>edit_Usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Productos\NewProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\MenuRestauranteAdmin.resx">
       <DependentUpon>MenuRestauranteAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\edit_Usuario.resx">
+      <DependentUpon>edit_Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productos\NewProducto.resx">
       <DependentUpon>NewProducto.cs</DependentUpon>
@@ -193,6 +202,11 @@
   <ItemGroup>
     <None Include="Resources\actualizar.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

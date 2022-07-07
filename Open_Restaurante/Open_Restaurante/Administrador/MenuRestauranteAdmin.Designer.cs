@@ -220,6 +220,7 @@
             // 
             // panelDER
             // 
+            this.panelDER.BackColor = System.Drawing.SystemColors.Control;
             this.panelDER.Controls.Add(this.panelconfig);
             this.panelDER.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelDER.Location = new System.Drawing.Point(1122, 0);
@@ -229,14 +230,16 @@
             // 
             // panelconfig
             // 
-            this.panelconfig.BackColor = System.Drawing.SystemColors.Control;
+            this.panelconfig.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelconfig.BackColor = System.Drawing.SystemColors.GrayText;
             this.panelconfig.Controls.Add(this.lbvec);
             this.panelconfig.Controls.Add(this.panelSubLogout);
-            this.panelconfig.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelconfig.Location = new System.Drawing.Point(0, 0);
             this.panelconfig.Name = "panelconfig";
             this.panelconfig.Size = new System.Drawing.Size(10, 610);
             this.panelconfig.TabIndex = 1;
+            this.panelconfig.Visible = false;
             // 
             // lbvec
             // 
@@ -290,6 +293,7 @@
             this.btnadminusers.TabIndex = 1;
             this.btnadminusers.Text = "Administrar Usuarios";
             this.btnadminusers.UseVisualStyleBackColor = true;
+            this.btnadminusers.Click += new System.EventHandler(this.btnadminusers_Click);
             // 
             // btnnewuser
             // 
@@ -369,7 +373,7 @@
             this.ttMsg.InitialDelay = 100;
             this.ttMsg.ReshowDelay = 100;
             // 
-            // MenuRestaurante
+            // MenuRestauranteAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -378,7 +382,7 @@
             this.ClientSize = new System.Drawing.Size(1132, 753);
             this.Controls.Add(this.PanelTrasero);
             this.MinimumSize = new System.Drawing.Size(700, 400);
-            this.Name = "MenuRestaurante";
+            this.Name = "MenuRestauranteAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuRestaurante";
             this.Load += new System.EventHandler(this.MenuRestaurante_Load);

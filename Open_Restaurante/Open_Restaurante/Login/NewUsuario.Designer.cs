@@ -100,11 +100,11 @@
             this.lbladdproducto.Location = new System.Drawing.Point(0, 0);
             this.lbladdproducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbladdproducto.Name = "lbladdproducto";
-            this.lbladdproducto.Padding = new System.Windows.Forms.Padding(0, 25, 0, 0);
+            this.lbladdproducto.Padding = new System.Windows.Forms.Padding(15, 25, 0, 0);
             this.lbladdproducto.Size = new System.Drawing.Size(349, 88);
             this.lbladdproducto.TabIndex = 2;
             this.lbladdproducto.Text = "Nuevo Usuario";
-            this.lbladdproducto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbladdproducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // BASE
             // 
@@ -139,6 +139,7 @@
             this.btnseleccionarimg.TabIndex = 3;
             this.btnseleccionarimg.Text = "Elegir Imagen";
             this.btnseleccionarimg.UseVisualStyleBackColor = true;
+            this.btnseleccionarimg.Click += new System.EventHandler(this.btnseleccionarimg_Click);
             // 
             // panelcontimg
             // 
@@ -152,6 +153,7 @@
             // pbimagen
             // 
             this.pbimagen.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbimagen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbimagen.Image = global::Open_Restaurante.Properties.Resources.productimg;
             this.pbimagen.Location = new System.Drawing.Point(59, 33);
             this.pbimagen.Name = "pbimagen";
@@ -340,7 +342,7 @@
             this.btnagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnagregar.Font = new System.Drawing.Font("Roboto", 12F);
             this.btnagregar.ForeColor = System.Drawing.Color.White;
-            this.btnagregar.Location = new System.Drawing.Point(310, 450);
+            this.btnagregar.Location = new System.Drawing.Point(310, 436);
             this.btnagregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(140, 44);
