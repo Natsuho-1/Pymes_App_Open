@@ -30,24 +30,22 @@ GO
 
 create table Usuarios(
 idUsuario int identity(1,1),
-nombre varchar(50),
-apellido varchar(50),
-fechaNacimiento date ,
-usuario varchar(50), 
-contrasena varchar(30),
+nombre varchar(50) not null,
+apellido varchar(50) not null,
+fechaNacimiento date not null,
+usuario varchar(50) UNIQUE not null, 
+contrasena Varbinary(50) not null,
 email varchar(100),
 Telefono varchar(20),
 idTipoUsuario int,
+foto image,
 constraint pk_Idusuario primary key (idUsuario),
 constraint fk_TipoUsuario foreign key (idTipoUsuario) references Tipo_usuario (idTipoUsuario)
 )
 GO
-
 --Insertando usuarios de prueba
 INSERT INTO Usuarios (nombre, apellido, fechaNacimiento, usuario, contrasena, email, Telefono, idTipoUsuario) 
-VALUES ('Juan', 'Pérez', '2000-10-3', 'JuanP12', '123456', 'juan.perez@gmail.com', '7361839', 1),
-('Pedro', 'Hernández', '2001-6-12', 'Pedro11', '123456', 'pedro.hndz@gmail.com', '7810385', 2),
-('Santos', 'Lemus', '2000-10-3', 'santos', '123456', 'juan.perez@gmail.com', '60606600', 1);
+VALUES ('Administrador', 'Principal', '2022-06-07', 'Admin',CONVERT(varbinary,'Admin'), 'administrador@email.com', '+503 0000-0000', 1);
 GO
 
 
@@ -60,22 +58,22 @@ GO
 --------------------------------------------------------------------------TABLAS PRODUCTOS
 create table Productos(
 idProducto int identity(1,1),
-nombreProducto varchar(25),
-codigoProducto varchar(5),
-precioProducto float,
+nombreProducto varchar(25) not null,
+codigoProducto varchar(5) not null,
+precioProducto float not null,
 Descripcion varchar(255),
 imgProducto image NULL,
 constraint pk_Productos primary key (idProducto)
 )
 GO
 
---Insertando productos (No insertarlos deste aquí)
+--Insertando productos (No insertarlos deste aquÃ­)
 INSERT INTO Productos (nombreProducto, codigoProducto, precioProducto, Descripcion) VALUES 
-('Pizza', 'PR775', '10', 'Aquí descripción'),
-('Hambuerguesa', 'PR662', '7.25', 'Aquí descripción'),
-('Ensalada', 'PR725', '5', 'Aquí descripción'),
-('Pollo Asado', 'PR687', '6.5', 'Aquí descripción'),
-('Paella', 'PR636', '7.25', 'Aquí descripción');
+('Pizza', 'PR775', '10', 'AquÃ­ descripciÃ³n'),
+('Hambuerguesa', 'PR662', '7.25', 'AquÃ­ descripciÃ³n'),
+('Ensalada', 'PR725', '5', 'AquÃ­ descripciÃ³n'),
+('Pollo Asado', 'PR687', '6.5', 'AquÃ­ descripciÃ³n'),
+('Paella', 'PR636', '7.25', 'AquÃ­ descripciÃ³n');
 GO
 
 
@@ -131,3 +129,33 @@ constraint fk_idPedido foreign key (idPedido) references Pedido(idPedido)
 
 --SELECT P.idPedido as Id,nombreProducto as Producto, cantidadProducto as Cantidad, fechaPedido from Pedido as P inner join Detalle_pedido as DP on P.idPedido = DP.idPedido 
 --inner join Productos as PR on DP.idProducto= PR.idProducto  WHERE estadoPedido=0 AND P.idPedido=22
+
+
+--PROCEDIEMNTOS PARA GUARDAR Y MOSTRAR IMAGENES
+GO
+
+create proc mostrar
+@cod varchar(50)
+as
+SELECT foto FROM Usuarios WHERE usuario=@cod;
+go
+
+
+create proc ingresarimg
+@cod varchar(50),
+@imagen image
+as
+UPDATE Usuarios SET foto=@imagen WHERE usuario=@cod;
+GO
+
+GO
+
+
+----VISTAS PARA VISUALIZAR USUSARIOS SIN CONTRASEÃ‘A Y METODOS DE IMAGENES
+CREATE VIEW view_users_in_database
+AS 
+SELECT usuario AS [Nombre de Usuario], CONCAT ( nombre, ' ', apellido) AS [Nombre Completo], fechaNacimiento AS CumpleaÃ±os, email AS Email, Telefono, idTipoUsuario AS [Tipo de Usuario]
+FROM Usuarios
+
+GO
+select*from view_users_in_database
