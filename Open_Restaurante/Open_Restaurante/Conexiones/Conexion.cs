@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -61,15 +61,15 @@ namespace Open_Restaurante
             con = new SqlConnection(sCn);
             con.Open();
         }
+
+        public void Cerrar()
+        {
+            con.Close();
+        }
         public void db_open()
         {
             cadena = "server=" + db_host + ";uid=" + db_user + ";pwd=" + db_pass + ";database=" + db_name;
         }
-        ///crear db_close()
-        protected void set_query(string @query)
-        {
-            comando = new SqlCommand(@query, CON);
-            comando.ExecuteNonQuery();
-        }
+
     }
 }

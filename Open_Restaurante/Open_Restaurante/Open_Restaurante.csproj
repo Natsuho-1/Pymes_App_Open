@@ -67,6 +67,9 @@
       <DependentUpon>MenuRestauranteAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\ModelProductos.cs" />
+    <Compile Include="Clases\Model_DetallePedido.cs" />
+    <Compile Include="Clases\ModelPedido.cs" />
+    <Compile Include="NewProducto.cs">
     <Compile Include="Productos\NewProducto.cs">
       <SubType>Form</SubType>
     </Compile>
