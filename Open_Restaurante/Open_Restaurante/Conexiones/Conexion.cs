@@ -68,6 +68,10 @@ namespace Open_Restaurante
             cadena = "server=" + db_host + ";uid=" + db_user + ";pwd=" + db_pass + ";database=" + db_name;
         }
         ///crear db_close()
+         public void Cerrar()
+        {
+            con.Close();
+        }
         protected void set_query(string query)
         {
             comando = new SqlCommand(query, con);
