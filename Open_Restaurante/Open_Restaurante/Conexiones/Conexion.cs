@@ -13,7 +13,9 @@ namespace Open_Restaurante
 {
     class Conexion
     {
-        private string db_host = "localhost";
+        //DESKTOP-229DHRP\\SQLEXPRESS
+        //Localhost
+        private string db_host = "DESKTOP-229DHRP\\SQLEXPRESS";
         private string db_user = "sa";
         private string db_pass = "123456";
         private string db_name = "Restaurantes_OpenLicense";
