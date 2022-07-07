@@ -31,8 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmLogin));
             this.pnllogologin = new System.Windows.Forms.Panel();
-            this.lblderechos = new System.Windows.Forms.Label();
+            this.lbtelefono = new System.Windows.Forms.Label();
+            this.lbcorreo = new System.Windows.Forms.Label();
+            this.lbcontactos = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pbxlogo = new System.Windows.Forms.PictureBox();
+            this.lblderechos = new System.Windows.Forms.Label();
             this.lbtitulo = new System.Windows.Forms.Label();
             this.btnlogin = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,18 +45,14 @@
             this.txtpass = new System.Windows.Forms.TextBox();
             this.cbmostrarpass = new System.Windows.Forms.CheckBox();
             this.ttMsg = new System.Windows.Forms.ToolTip(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbcontactos = new System.Windows.Forms.Label();
-            this.lbcorreo = new System.Windows.Forms.Label();
-            this.lbtelefono = new System.Windows.Forms.Label();
             this.pnllogologin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxlogo)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxlogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnllogologin
             // 
-            this.pnllogologin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.pnllogologin.BackColor = System.Drawing.Color.SteelBlue;
             this.pnllogologin.Controls.Add(this.lbtelefono);
             this.pnllogologin.Controls.Add(this.lbcorreo);
             this.pnllogologin.Controls.Add(this.lbcontactos);
@@ -66,6 +66,60 @@
             this.pnllogologin.Size = new System.Drawing.Size(417, 588);
             this.pnllogologin.TabIndex = 1;
             // 
+            // lbtelefono
+            // 
+            this.lbtelefono.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbtelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbtelefono.ForeColor = System.Drawing.Color.White;
+            this.lbtelefono.Location = new System.Drawing.Point(0, 480);
+            this.lbtelefono.Name = "lbtelefono";
+            this.lbtelefono.Size = new System.Drawing.Size(417, 39);
+            this.lbtelefono.TabIndex = 6;
+            this.lbtelefono.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbcorreo
+            // 
+            this.lbcorreo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbcorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbcorreo.ForeColor = System.Drawing.Color.White;
+            this.lbcorreo.Location = new System.Drawing.Point(0, 441);
+            this.lbcorreo.Name = "lbcorreo";
+            this.lbcorreo.Size = new System.Drawing.Size(417, 39);
+            this.lbcorreo.TabIndex = 5;
+            this.lbcorreo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbcontactos
+            // 
+            this.lbcontactos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbcontactos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbcontactos.ForeColor = System.Drawing.Color.White;
+            this.lbcontactos.Location = new System.Drawing.Point(0, 391);
+            this.lbcontactos.Name = "lbcontactos";
+            this.lbcontactos.Size = new System.Drawing.Size(417, 50);
+            this.lbcontactos.TabIndex = 4;
+            this.lbcontactos.Text = "CONTACTOS";
+            this.lbcontactos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pbxlogo);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 165);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(417, 226);
+            this.panel1.TabIndex = 3;
+            // 
+            // pbxlogo
+            // 
+            this.pbxlogo.Image = global::Open_Restaurante.Properties.Resources.LogoRes;
+            this.pbxlogo.Location = new System.Drawing.Point(100, 4);
+            this.pbxlogo.Margin = new System.Windows.Forms.Padding(4);
+            this.pbxlogo.Name = "pbxlogo";
+            this.pbxlogo.Size = new System.Drawing.Size(219, 213);
+            this.pbxlogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxlogo.TabIndex = 1;
+            this.pbxlogo.TabStop = false;
+            // 
             // lblderechos
             // 
             this.lblderechos.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -78,17 +132,6 @@
             this.lblderechos.TabIndex = 2;
             this.lblderechos.Text = "Copyright © Derechos reservados 2022";
             this.lblderechos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pbxlogo
-            // 
-            this.pbxlogo.Image = global::Open_Restaurante.Properties.Resources.LogoRes;
-            this.pbxlogo.Location = new System.Drawing.Point(100, 4);
-            this.pbxlogo.Margin = new System.Windows.Forms.Padding(4);
-            this.pbxlogo.Name = "pbxlogo";
-            this.pbxlogo.Size = new System.Drawing.Size(219, 213);
-            this.pbxlogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxlogo.TabIndex = 1;
-            this.pbxlogo.TabStop = false;
             // 
             // lbtitulo
             // 
@@ -105,7 +148,7 @@
             // 
             // btnlogin
             // 
-            this.btnlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(48)))));
+            this.btnlogin.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnlogin.FlatAppearance.BorderSize = 0;
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogin.Font = new System.Drawing.Font("Roboto", 12F);
@@ -172,7 +215,6 @@
             this.cbmostrarpass.Name = "cbmostrarpass";
             this.cbmostrarpass.Size = new System.Drawing.Size(30, 27);
             this.cbmostrarpass.TabIndex = 34;
-            this.cbmostrarpass.Text = "checkBox1";
             this.cbmostrarpass.UseVisualStyleBackColor = true;
             this.cbmostrarpass.CheckedChanged += new System.EventHandler(this.cbmostrarpass_CheckedChanged);
             // 
@@ -182,54 +224,11 @@
             this.ttMsg.InitialDelay = 100;
             this.ttMsg.ReshowDelay = 100;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pbxlogo);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 165);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(417, 226);
-            this.panel1.TabIndex = 3;
-            // 
-            // lbcontactos
-            // 
-            this.lbcontactos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbcontactos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbcontactos.ForeColor = System.Drawing.Color.White;
-            this.lbcontactos.Location = new System.Drawing.Point(0, 391);
-            this.lbcontactos.Name = "lbcontactos";
-            this.lbcontactos.Size = new System.Drawing.Size(417, 50);
-            this.lbcontactos.TabIndex = 4;
-            this.lbcontactos.Text = "CONTACTOS";
-            this.lbcontactos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbcorreo
-            // 
-            this.lbcorreo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbcorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbcorreo.ForeColor = System.Drawing.Color.White;
-            this.lbcorreo.Location = new System.Drawing.Point(0, 441);
-            this.lbcorreo.Name = "lbcorreo";
-            this.lbcorreo.Size = new System.Drawing.Size(417, 39);
-            this.lbcorreo.TabIndex = 5;
-            this.lbcorreo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbtelefono
-            // 
-            this.lbtelefono.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbtelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbtelefono.ForeColor = System.Drawing.Color.White;
-            this.lbtelefono.Location = new System.Drawing.Point(0, 480);
-            this.lbtelefono.Name = "lbtelefono";
-            this.lbtelefono.Size = new System.Drawing.Size(417, 39);
-            this.lbtelefono.TabIndex = 6;
-            this.lbtelefono.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // FmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(836, 588);
             this.Controls.Add(this.cbmostrarpass);
             this.Controls.Add(this.txtpass);
@@ -246,8 +245,8 @@
             this.Text = "Iniciar sesion";
             this.Load += new System.EventHandler(this.FmLogin_Load);
             this.pnllogologin.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxlogo)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxlogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

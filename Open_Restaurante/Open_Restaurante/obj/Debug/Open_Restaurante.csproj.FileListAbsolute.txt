@@ -11,3 +11,5 @@ C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Res
 C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Restaurante.MenuPrueba.resources
 C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Restaurante.MenuRestaurante.resources
 C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Restaurante.NewProducto.resources
+C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Restaurante.NewUsuario.resources
+C:\Users\Ronal\source\repos\Open_Restaurante\Open_Restaurante\obj\Debug\Open_Restaurante.Personalizar.resources
